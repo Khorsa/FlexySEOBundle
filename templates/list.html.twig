@@ -1,0 +1,16 @@
+{% extends '@FlexyAdminFrame/adminpanelbase.html.twig' %}
+
+{% block content %}
+
+<table class="flexy-table" data-ajax="{{ ajax }}" data-serverside="false" data-checkboxes="false">
+	<thead>
+		<tr>
+			<th data-searchable="false" data-orderable="false" data-type=""></th> {# Кнопки #}
+			<th data-searchable="true" data-orderable="true" data-type="string">Title</th>
+			<th data-searchable="true" data-orderable="true" data-type="string">Route</th>
+			<th data-searchable="true" data-orderable="true" data-type="string">Адрес</th>
+		</tr>
+	</thead>
+</table>
+
+{% endblock %}
