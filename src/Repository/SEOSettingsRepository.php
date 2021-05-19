@@ -78,7 +78,4 @@ class SEOSettingsRepository extends ServiceEntityRepository
             $new->save();
         }
     }
-
-
-
 }

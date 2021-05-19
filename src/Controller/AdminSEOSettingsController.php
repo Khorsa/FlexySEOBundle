@@ -25,9 +25,6 @@ class AdminSEOSettingsController extends AdminBaseController
      */
     public function list()
     {
-
-
-
         $forRender = parent::renderDefault();
         $forRender['title'] = "SEO-настройки разделов";
 
