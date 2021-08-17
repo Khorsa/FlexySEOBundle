@@ -63,13 +63,17 @@ class AdminSEOSettingsController extends AdminBaseController
         $data = array();
         foreach($settings as $setting)
         {
-            $item = array();
-            $item[] = '<a href="' . $this->generateUrl("admin_seosettings_edit", ['id' => $setting->getId()]) . '" class="btn btn-sm btn-primary"><i class="far fa-edit"></i></a>';
-            $item[] = $setting->getTitle();
-            $item[] = $setting->getRoute();
-            $item[] = $this->generateUrl($setting->getRoute());
+            try {
+                $item = array();
+                $item[] = '<a href="' . $this->generateUrl("admin_seosettings_edit", ['id' => $setting->getId()]) . '" class="btn btn-sm btn-primary"><i class="far fa-edit"></i></a>';
+                $item[] = $setting->getTitle();
+                $item[] = $setting->getRoute();
+                $item[] = $this->generateUrl($setting->getRoute());
 
-            $data[] = $item;
+                $data[] = $item;
+            } catch(\Exception $ex) {
+                
+            }
         }
 
         return $this->json([
